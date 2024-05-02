@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name         DMHY新番資源索引 修正(GitHub版)
 // @namespace    https://github.com/rinsaika/dmhy-
-// @version      0.6.10
+// @version      0.6.11
 // @description  修改DMHY新番資源索引，修正為目前播映中動畫，安裝完GitHub版後，就不需要一直更新了。
 // @author       Saika
+// @match        https://www.dmhy.org/*
 // @match        https://share.dmhy.org/*
 // @match        https://dmhy.b168.net/*
 // @match        https://dmhy.org/*
