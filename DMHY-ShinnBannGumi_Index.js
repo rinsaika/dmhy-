@@ -18,7 +18,7 @@
 
 (function() {
     'use strict';
-
+    var hostname = window.location.hostname;
     // 選擇包含新番索引的表格
     const table = document.querySelector('table.jmd');
     if (!table) {
