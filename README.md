@@ -13,12 +13,15 @@
     - 開啟[油猴] → [新增腳本...]
       >此時會跳出預設的腳本內容，全部刪除
     - 最後貼上<kbd>Ctrl+V</kbd>，並保存<kbd>Ctrl+S</kbd>即可
-- [GreasyFork 須要更新版](https://greasyfork.org/zh-TW/scripts/493955-dmhy%E6%96%B0%E7%95%AA%E8%B3%87%E6%BA%90%E7%B4%A2%E5%BC%95-%E4%BF%AE%E6%AD%A3)
+- [GreasyFork 需要更新版](https://greasyfork.org/zh-TW/scripts/493955-dmhy%E6%96%B0%E7%95%AA%E8%B3%87%E6%BA%90%E7%B4%A2%E5%BC%95-%E4%BF%AE%E6%AD%A3)
   >GreasyFork版：因GreasyFork不提供外部動態連結，所以我每次更新索引，使用者都必須更新一次。<br>
   >建議將[油猴]-[設定]-[腳本更新]功能打開<br>
   >好處是使用者可以更自由靈活更改自己需要的連結，可以進去編輯
   - 安裝流程
     - 點選上方連結，按<kbd>安裝腳本</kbd>即可
+    - 使用此方法，建議將 [油猴] → [控制台(Dashboard)] →  [設定]分頁 → [腳本更新]選項的功能開啟
+   
+
 ## 效果
 原本的樣子
 ![](https://github.com/rinsaika/dmhy-/blob/main/%E5%8E%9F%E6%9C%AC.png)
