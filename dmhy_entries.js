@@ -1,4 +1,6 @@
 const dmhyEntries = [
+      var hostname = window.location.hostname;
+
 {day:1, name: '無職轉生 S2', link: 'https://' + hostname + '/topics/list?keyword=無職轉生' },
 {day:1, name: '明明是個礙事配角、卻被王子給寵愛了', link: 'https://' + hostname + '/topics/list?keyword=明明是個礙事配角 卻被王子給寵愛了' },
 {day:1, name: '暗芝居 S12', link: 'https://' + hostname + '/topics/list?keyword=暗芝居' },
