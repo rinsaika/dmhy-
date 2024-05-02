@@ -7,6 +7,7 @@
 // @match        https://share.dmhy.org/*
 // @match        https://dmhy.b168.net/*
 // @match        https://dmhy.org/*
+// @match        https://dmhy.anoneko.com/*
 // @grant        none
 // @icon         https://share.dmhy.org/favicon.ico
 // @icon64       https://share.dmhy.org/favicon.ico
