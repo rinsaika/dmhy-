@@ -1,6 +1,4 @@
 // dmhy_entries.js
-
-const dmhyEntries = [
     {day:1, name: '无职转生Ⅱ ～到了异世界就拿出真本事～ 第2部分', link: 'https://share.dmhy.org/topics/list?keyword=無職転生Ⅱ ～異世界行ったら本気だす～(第2クール)' },
     {day:1, name: '明明是个碍事配角、却被王子给宠爱了', link: 'https://share.dmhy.org/topics/list?keyword=当て馬キャラのくせして、スパダリ王子に寵愛されています。' },
     {day:1, name: '暗芝居 第十二季', link: 'https://share.dmhy.org/topics/list?keyword=闇芝居(第12期)' },
@@ -101,9 +99,5 @@ const dmhyEntries = [
     {day:0, name: '转生贵族靠着鉴定技能一飞冲天', link: 'https://share.dmhy.org/topics/list?keyword=転生貴族、鑑定スキルで成り上がる' },
     {day:0, name: '爷爷奶奶返老还童', link: 'https://share.dmhy.org/topics/list?keyword=じいさんばあさん若返る' },
     {day:0, name: '吸血鬼男子宿舍', link: 'https://share.dmhy.org/topics/list?keyword=ヴァンパイア男子寮' },
-    {day:0, name: '蔚蓝档案 动画版', link: 'https://share.dmhy.org/topics/list?keyword=ブルーアーカイブ The Animation' },
+    {day:0, name: '蔚蓝档案 动画版', link: 'https://share.dmhy.org/topics/list?keyword=ブルーアーカイブ The Animation' }
 
-    // 在这里添加更多条目
-];
-
-export default dmhyEntries;
