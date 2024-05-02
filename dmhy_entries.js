@@ -18,7 +18,6 @@ const dmhyEntries = [
 {day:3, name: '怪異與少女與神隱', link: 'https://' + hostname + '/topics/list?keyword=怪異與少女與神隱' },
 {day:3, name: '為美好的世界獻上祝福！S3', link: 'https://' + hostname + '/topics/list?keyword=為美好的世界獻上祝福' },
 {day:3, name: '約會大作戰 S5', link: 'https://' + hostname + '/topics/list?keyword=約會大作戰' },
-{day:4, name: '戰國妖狐', link: 'https://' + hostname + '/topics/list?keyword=戰國妖狐' },
 {day:4, name: '王牌酒保', link: 'https://' + hostname + '/topics/list?keyword=王牌酒保' },
 {day:4, name: '格鬥實況', link: 'https://' + hostname + '/topics/list?keyword=格鬥實況' },
 {day:4, name: '雀魂 KANG!!', link: 'https://' + hostname + '/topics/list?keyword=雀魂 KANG' },
