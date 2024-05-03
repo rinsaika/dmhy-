@@ -27,10 +27,13 @@
 
 # 效果
 原本的樣子
-![](https://github.com/rinsaika/dmhy-/blob/main/%E5%8E%9F%E6%9C%AC.png)
+![](https://raw.githubusercontent.com/rinsaika/dmhy-/main/%E5%8E%9F%E6%9C%AC.webp)
 
-更新之後
-![](https://github.com/rinsaika/dmhy-/blob/main/%E6%9B%B4%E6%96%B0%E5%BE%8C.png)
+繁體瀏覽器 的顯示效果
+![](https://raw.githubusercontent.com/rinsaika/dmhy-/main/%E7%B9%81%E9%AB%94.webp)
+
+簡體瀏覽器 的顯示效果
+![](https://raw.githubusercontent.com/rinsaika/dmhy-/main/%E7%B0%A1%E9%AB%94.webp)
 
 
 # 索引的資料來源說明
@@ -47,18 +50,19 @@
 3. [Anime List](https://acgntaiwan.github.io/Anime-List/)
     >台版翻譯的輔助網頁
 4. [YuC's AnimeList](https://yuc.wiki/)
-    >將台版沒有的動畫補足(<b>*會將簡體字轉成繁體字</b>)
+    >核對陸版翻譯
 5. [bangumi.tv：每日放送](https://bgmlist.com/)
     >繼續補完
 6. 其他
-    >再考慮別的運作方式
+    >納入別的網頁做為參考
 
 # 已知問題
 > [!WARNING]
 > * 由於各動畫組取名、翻譯問題，可能導致索引的搜尋功能失敗
->    >目前已測試，盡量完善搜尋功能
+>    >目前已完成測試，盡量完善動漫花園的搜尋功能
 > * 資源不全的問題
 >    >新番不見得都有資源。這樣還需要建立該索引嗎?
+>    >目前是仍然納入，但移動到其他表格中
 > * 由於是<b><u>個人手動更新</u></b>，可能有停更的一天
 >    >哪天遇到了更好用的網站可能就跳槽，直接放生動漫花園了
 
@@ -66,15 +70,15 @@
 其他功能都寫好了，唯一常常變動的就是 索引更新的部分
 
 <code>const dmhyEntries = [ <br>
-{day:1, name: '無職轉生 S2', link: 'https://' + hostname + '/topics/list?keyword=無職轉生' },<br>
-{day:6, name: '良禽不擇木', link: 'https://' + hostname + '/topics/list?keyword=烏は主を選ばない' },<br>
-{day:0, name: '龍族', link: 'https://' + hostname + '/topics/list?keyword=龍族' },<br>
+{day:1, nameTW: '終末的列車前往何方？', nameCN:'末班列车去哪里了？', link: 'https://' + hostname + '/topics/list?keyword=列車' },<br>
+{day:1, nameTW: '神明渴求著遊戲。', nameCN:'神渴望着游戏。', link: 'https://' + hostname + '/topics/list?keyword=神明渴求著遊戲' },<br>
 ]</code>
 
 - 簡單說明
-- <code>day:</code> 填入數字0123456 對應 日一二三四五六
-- <code>name: ''</code>  ''裡的文字 是連結的文字
-- <code>link: 'https://' + hostname + '/topics/list?keyword=龍族' }</code> 前面都保持不動，keyword=後面的內容是查詢功能
+- <code>day:</code> 填入數字01234567 對應 日一二三四五六其他 (注意0是週日；7是其他)
+- <code>nameTW: ''</code>  ''裡為繁體顯示文字
+- <code>nameCN: ''</code>  ''里为简体显示文字
+- <code>link: 'https://' + hostname + '/topics/list?keyword=列車' }</code> 前面都保持不動，keyword=後面的內容是查詢功能
 - 如此一來就能撰寫自己的版本了
 
 # 計畫
