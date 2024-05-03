@@ -1,18 +1,21 @@
 # 說明
-因為 [動漫花園 DMHY新番資源索引](https://share.dmhy.org/) 一直不更新，所以透過AI撰寫了一個油猴插件<br><br>
-在製作過程中發現有人先做好了一個版本。但其效果我覺得沒有到我想要的，所以還是製作了一個自己的版本<br>
-基本上都是透過ChatGPT、cohere大型語言模組完成油猴插件，再做細部修正<br>
+　　因為 [動漫花園 DMHY新番資源索引](https://share.dmhy.org/) 一直不更新，之前神人做的插件也都失靈了。所以起心動念自製一個新的油猴插件。<br><br>
+　　在製作過程中發現有人先做好了一個版本。但其效果我覺得沒有到我想要的，所以還是製作了一個自己的版本<br>
+　　基本上都是透過ChatGPT、cohere大型語言模組完成油猴插件，再做細部修正<br>
 
-## 安裝
-- [Tampermonkey 篡改猴](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) 或 [Tampermonkey BETA 篡改猴測試版](https://chrome.google.com/webstore/detail/tampermonkey-beta/gcalenpjmijncebpfijmoaglllgpjagf)
->以下兩者擇一安裝即可
+# 安裝
+>瀏覽器擴充功能，兩者擇一安裝即可
+- [Tampermonkey 篡改猴](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+- [Tampermonkey BETA 篡改猴測試版](https://chrome.google.com/webstore/detail/tampermonkey-beta/gcalenpjmijncebpfijmoaglllgpjagf)
+>油猴腳本，以下兩者擇一安裝即可
 - [GitHub 動態更新版](https://raw.githubusercontent.com/rinsaika/dmhy-/main/DMHY-ShinnBannGumi_Index.js)
   >GitHub版：將索引用外部連結的方式讀取，好處是使用者不再需要一直頻繁更新油猴插件，只有核心功能影響時，才需要更新。<br>(但是如果需要翻牆才能讀取GitHub的使用者就無法使用此方法)
   - 安裝流程
-    - 上方連結為js檔案，全選<kbd>Ctrl+A</kbd>、複製<kbd>Ctrl+C</kbd> (將整個檔案內文字複製)
-    - 開啟[油猴] → [新增腳本...]
+    - 上方連結為js檔案，將內容全選<kbd>Ctrl+A</kbd>、複製<kbd>Ctrl+C</kbd> (將整個檔案內文字複製)
+    - 開啟瀏覽器 [油猴] → [新增腳本...]
       >此時會跳出預設的腳本內容，全部刪除
-    - 最後貼上<kbd>Ctrl+V</kbd>，並保存<kbd>Ctrl+S</kbd>即可，未來油猴會自動判斷版本更新
+    - 最後將腳本貼上<kbd>Ctrl+V</kbd>，並保存<kbd>Ctrl+S</kbd>即可，未來油猴會自動判斷GitHub版本更新
+      
 - [GreasyFork 靜態更新版](https://greasyfork.org/zh-TW/scripts/493955-dmhy%E6%96%B0%E7%95%AA%E8%B3%87%E6%BA%90%E7%B4%A2%E5%BC%95-%E4%BF%AE%E6%AD%A3)
   >GreasyFork版：因GreasyFork不提供外部動態連結，所以我每次更新"新番索引"時，使用者都必須更新一次。才能顯示最新的索引<br>
   >壞處是我一更新，使用者也必須更新才可以<br>
@@ -22,7 +25,7 @@
     - 使用此方法，建議將 [油猴] → [控制台(Dashboard)] →  [設定]分頁 → [腳本更新]選項的功能開啟
    
 
-## 效果
+# 效果
 原本的樣子
 ![](https://github.com/rinsaika/dmhy-/blob/main/%E5%8E%9F%E6%9C%AC.png)
 
@@ -30,23 +33,36 @@
 ![](https://github.com/rinsaika/dmhy-/blob/main/%E6%9B%B4%E6%96%B0%E5%BE%8C.png)
 
 
-## 索引的資料來源
-* 番组放送 https://bgmlist.com/
-  >用來確認每日放送動畫
-* ACG Secrets.HK https://acgsecrets.hk/bangumi/
-  >用來確認翻譯名字 (中港台各自翻譯都不大一樣...有點...emmm)
-* 其他
-  >來自我手動查找
+# 索引的資料來源說明
+> [!NOTE]
+> 此部分將會在下一季(2024-07)做一個大更新<br>
+> 由於中港台各版本的翻譯混亂，加上放映時間各有不同。更別提字幕組也可能有自己的翻譯版本。<br>
+> "新番索引"的整合作業難度大幅提升。
 
-## 已知問題
-* 由於各動畫組取名、翻譯問題，可能導致索引的搜尋功能失敗
-  >目前已測試，盡量完善搜尋功能
-* 資源不全的問題，新番不見得都有資源。這樣還需要建立該索引嗎?
-* 新番索引為 <b><i>我本人手動更新</i></b> 還在用就會持續更新。
+* 之後依以下的流程，進行[新番索引]的整合
+1. [animate Times：今期アニメの曜日別放送スケジュール一覧](https://www.animatetimes.com/tag/details.php?id=1392) 
+    >完全依照日版的放映時間來做排序，用來確認每日放送動畫
+2. [巴哈姆特動畫瘋：週期表](https://ani.gamer.com.tw/)
+    >核對台版官方翻譯
+3. [Anime List](https://acgntaiwan.github.io/Anime-List/)
+    >台版翻譯的輔助網頁
+4. [YuC's AnimeList](https://yuc.wiki/)
+    >將台版沒有的動畫補足(<b>*會將簡體字轉成繁體字</b>)
+5. [bangumi.tv：每日放送](https://bgmlist.com/)
+    >繼續補完
+6. 其他
+    >再考慮別的運作方式
 
+# 已知問題
+> [!WARNING]
+> * 由於各動畫組取名、翻譯問題，可能導致索引的搜尋功能失敗
+>    >目前已測試，盡量完善搜尋功能
+> * 資源不全的問題
+>    >新番不見得都有資源。這樣還需要建立該索引嗎?
+> * 由於是<b><u>個人手動更新</u></b>，可能有停更的一天
+>    >哪天遇到了更好用的網站可能就跳槽，直接放生動漫花園了
 
-
-# 自己撰寫方式說明
+# [說明]自定義索引
 其他功能都寫好了，唯一常常變動的就是 索引更新的部分
 
 <code>const dmhyEntries = [ <br>
@@ -60,3 +76,16 @@
 - <code>name: ''</code>  ''裡的文字 是連結的文字
 - <code>link: 'https://' + hostname + '/topics/list?keyword=龍族' }</code> 前面都保持不動，keyword=後面的內容是查詢功能
 - 如此一來就能撰寫自己的版本了
+
+# 計畫
+- [ ] 下次版本更新，將在"週日"表格下方，新增一欄作為其他連結使用。
+- [ ] 版本號規格化處理 GreasyFork(2.202407v1)、GitHub(2.0)
+     > 之後GreasyFork版本號採用"2.202407v1"的形式<br>
+     > 2：表示油猴框架的更新 (GitHub是動態的，所以是2.0)<br>
+     > 202407：表示新番索引的版本，每一次都使用年月份好辨別<br>
+     > v1：表示索引的版本號
+- [ ] 考慮做一個切換按鈕，可以自由切換簡繁翻譯索引。但還在思考中
+- [ ] 其他 (有任何問題，需求可以嘗試向我提出?? 能力範圍試試看)
+
+
+
