@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DMHY新番資源索引 修正(GitHub版)
 // @namespace    https://github.com/rinsaika/dmhy-
-// @version      0.6.11
+// @version      2.0
 // @description  修改DMHY新番資源索引，修正為目前播映中動畫，安裝完GitHub版後，就不需要一直更新了。
 // @author       Saika
 // @match        https://www.dmhy.org/*
@@ -17,6 +17,7 @@
 // @updateURL    https://raw.githubusercontent.com/rinsaika/dmhy-/main/DMHY-ShinnBannGumi_Index.js
 // @downloadURL  https://raw.githubusercontent.com/rinsaika/dmhy-/main/DMHY-ShinnBannGumi_Index.js
 // ==/UserScript==
+
 
 (function() {
     'use strict';
@@ -39,35 +40,38 @@
     }
 
     // 調整 daysOfWeek 陣列順序和日文
-    const daysOfWeek = ['日（日）', '一（月）', '二（火）', '三（水）', '四（木）', '五（金）', '六（土）'];
+    const daysOfWeek = ['週日（日）', '週一（月）', '週二（火）', '週三（水）', '週四（木）', '週五（金）', '週六（土）', '其他'];
 
     // 定義要插入的多個連結的數組
-    //day:0~6 表示日到六 name:表示連結名字   link: 表示連結內榮
-    //動態更新 索引
+
+    //外部連結 動態更新 索引
 
     const newRows = daysOfWeek.map((day, index) => {
         const newRow = document.createElement('tr');
         const newDay = document.createElement('th');
-        newDay.innerText = `週${day}`;
+        newDay.innerText = `${day}`;
         const newAnimeList = document.createElement('td');
 
-         // 如果日期是今天，添加类名
+        // 如果日期是今天，添加类名
         if (day === daysOfWeek[todayDay]) {
             newRow.classList.add('today');
-        }
-          // 如果日期是昨天或明天，添加类名
-        else if (day === daysOfWeek[(todayDay + 1) % 7] || day === daysOfWeek[(todayDay + 6) % 7]) {
+        } else if (day === daysOfWeek[(todayDay + 1) % 7] || day === daysOfWeek[(todayDay + 6) % 7]) {
             newRow.classList.add('odd');
-        }else{
-             newRow.classList.add('even');
-        };
+        } else {
+            newRow.classList.add('even');
+        }
 
         // 遍歷條目，如果今天是指定的星期，則插入超連結
         dmhyEntries.forEach(entry => {
             if (entry.day === index) {
                 const newAnimeLink = document.createElement('a');
                 newAnimeLink.href = entry.link;
-                newAnimeLink.textContent = entry.name;
+                // 判斷瀏覽器語言是簡體中文還是其他語言
+                if (navigator.language.toLowerCase() === 'zh-cn') {
+                    newAnimeLink.textContent = entry.nameCN;
+                } else {
+                    newAnimeLink.textContent = entry.nameTW;
+                }
                 newAnimeList.appendChild(newAnimeLink);
             }
         });
@@ -79,5 +83,4 @@
 
     // 在表格中添加新行
     newRows.forEach(newRow => table.appendChild(newRow));
-
 })();
