@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DMHY新番資源索引 修正(GitHub版)
 // @namespace    https://github.com/rinsaika/dmhy-
-// @version      3.0
+// @version      3.1
 // @description  修改DMHY新番資源索引，修正為目前播映中動畫，安裝完GitHub版後，就不需要一直更新了。
 // @author       Saika
 // @match        https://www.dmhy.org/*
@@ -18,6 +18,19 @@
 // @updateURL    https://raw.githubusercontent.com/rinsaika/dmhy-/main/DMHY-ShinnBannGumi_Index.js
 // @downloadURL  https://raw.githubusercontent.com/rinsaika/dmhy-/main/DMHY-ShinnBannGumi_Index.js
 // ==/UserScript==
+
+//1天更新一次dmhy_entries.js
+(function() {
+    function loadScript() {
+        var script = document.createElement('script');
+        script.src = 'https://raw.githubusercontent.com/rinsaika/dmhy-/main/dmhy_entries.js?timestamp=' + new Date().getTime();
+        document.head.appendChild(script);
+    }
+
+    loadScript();
+    setInterval(loadScript, 24 * 60 * 60 * 1000); // 每24小时更新一次
+})();
+
 
 
 (function() {
