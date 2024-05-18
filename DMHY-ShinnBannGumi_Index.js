@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DMHY新番資源索引 修正(GitHub版)
 // @namespace    https://github.com/rinsaika/dmhy-
-// @version      4.0
+// @version      4.1
 // @description  修改DMHY新番資源索引，修正為目前播映中動畫，安裝完GitHub版後，就不需要一直更新了。
 // @author       Saika
 // @match        https://www.dmhy.org/*
@@ -100,6 +100,7 @@
             if (entry.day === index) {
                 const newAnimeLink = document.createElement('a');
                 newAnimeLink.href = entry.link;
+                newAnimeLink.title = entry.nameJP;
                 if (navigator.language.toLowerCase() === 'zh-cn') {
                     newAnimeLink.innerHTML = replaceTextWithImage(entry.nameCN);
                 } else {
