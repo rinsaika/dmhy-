@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DMHY新番資源索引 修正(GitHub版)
 // @namespace    https://github.com/rinsaika/dmhy-
-// @version      4.3
+// @version      4.4
 // @description  修改DMHY新番資源索引，修正為目前播映中動畫，安裝完GitHub版後，就不需要一直更新了。
 // @author       Saika
 // @match        https://www.dmhy.org/*
@@ -58,19 +58,22 @@
   const base64img_bilibili = 'UklGRjQCAABXRUJQVlA4WAoAAAAQAAAAHwAAHwAAQUxQSM4AAAABgBvZttvmUeYj+0gNKwKakIsJtsSQDZAdvJF3PXA+ZEKv6Mh9h5HyiJgAGefO4mFpw+zycbETsgeoDbEK7IUcAqj1WQU4CjEKoOVvVgHUhIhVAC1/WAXQUrymP34i6dNxb0Rkek3G66mYa7LeFDMyz46BdS1J6zVw/AHUkrgG3gEkOd5xtM61vta5Ns6B8zlwcQA+gPE5GHwOhrhu2HS+bth0cWn/hw+gTlUBT8fAqkozXQHHPZn74ibPbSHT6xw3UxEx8/PnNM/ncyN/IFZQOCBAAQAA0AoAnQEqIAAgAD4tEoZCoaEN/qoADAFiWwAnTKEcDeAfhf+OXQB6fdq8kD5Avp/3Abwp/Vf4BvAP0g/t3t/9IB/lf8z6lf9V9gD0API3/Zb4Ev2X/bD2Wf/oCXVeJQAA/uX6P/oWmlSOGvksoousVEcUdFouLi5hXYsovwfVQpx//vS/SX/Yo2H1WiQEb9vRTyBAr2A/5e+JFtJNcQ6hNSEN87Aji+H8fn1MZg2H45c9bcr54uawhk7WkaBWFzgZyV9nPtP43d4SO2/f6/1DqKFPE2mhNOVEqxpxvbj8ycppu6T//qvvX4qNUNswGQ0ao6Y2Ayz/72I//8vVTU9cx0+6ieVrjor7yqxtvwBeR//MdQD9YyaTBzP2wnLpiqsBVpUslUPQhpb2uqh28jMxLnnNwAbdLbTFsb9O76QYAAA=';
   const base64img_ABEMA = 'UklGRjQCAABXRUJQVlA4ICgCAABQDQCdASogACAAAMASJaQATwFVNecfiPklnjP5JfkrqGf5d+Mn8A/wGWf/o2kK/zjUP/5f8jvcT/pvsr9pX4h/Uv7x/Iv20/lf2Bfxn+Rf2j8wP71/9uUp/Uk7Ne+IoW2WjYji9mVbPzWiyWPuoKZFJ3vwAP7//k4e3/GzcUsM9lRxhQAB0GWbe2mOURJRCT5PRcto3xP3mGWxKST7wJQDIbblKa4eZn0CAf/ocl7v+LbJMjJBtTX+7H5HZR9/x1/9O6qw+3I9aBjkazina5FnCB4640H88BK++itTLYXWgIj3rx/3+v0JbDqlvSvCG3BbGdzw7wif7FZSdPfshbc2K1j0DUFmgQzigRhz1mgjM47+cA2/6f61hZf/jKfN3HoDyQTCimH3Sjnr0xyTiawlHJDylrBXWZsXLOAKTw93W5ePndGzYtIcMe6B4vf35EZUkaxkND/idT+Jb/7BYkn+ptiHOzn/9dBz/bhmCMB3xQIUbP39i0pK8QUhTCsuq3OQTp4ZCChXW2KMe7LHDexxWRbmkZbMQYT7V+aK7/qX4D2/Zz/1c/9ZWR6819Dib8lvC27HJV9ZSef5tZRy8pfBZPhgeGX/k7f6uZSSrpex6JNsiwoP0A4pyO5c8UHRuqH8VF2iHfXcaCslTsetQf/9OJqmA/7NAUD/7R/co8YzPAgZQOuf/rrTWZXCJmrE//7teMqoJ0FSJiEq1nXbjylf2nLokwVgAAA=';
   const base64img_YouTube = 'UklGRuAFAABXRUJQVlA4WAoAAAAUAAAAHwAAHwAAQUxQSLMAAAABgGNt2zHnHdvmBqaaMz2XoAWkdDovgK2dtLZt27ad2s4T1RExAfSfZLDeZn7KHppWXNMxMDGztPh6aX5ypLe1sjA1wskgIlHx/ePXd1mJUfwI7eU67jCP3uhHcGIWqqQW1TaAmpxDrayg9pZRhys/7WABtTGMmm1E9eajSmNQSU6Uj9OCWZCQqRcxbyMidjC9YXhp+/Ds6vbdy7PD7aWRptwQCb3PEshUOuO7WpWUz6L/IgBWUDgg7AEAANANAJ0BKiAAIAAAwBIlsAJ0yhHA3nf4NcgZoF2W/aPKNtivMB/AOcR/rn5HcAD9S/XH6QD9mesA9ADylP9B/gPg4/Yb9dPZVzQDr9/sFc6tqPQc80+wB/D/5v/uuBA/XI6Z52qFJQU8wwyQBMcZzeT7Fo0yKBagAP74YejH3nHrIU1s7eLiLYTrHlv9w8pJ3TVa1ZK1cKk9bZLcGVt9YGrDvaZEL+Arkf22D46oSb/9Hn/73rDFTx6/7fUrzgPb2Phm0yScdUUq0v/3bJkZ5hm17dcyJ1PRYP+qSdA9Q/rlcLbQ7zdbFBPyhQubW/NQVBH+rsnwY42452fhTbINIt9lXf8RwZg8m4ul+VbYl5Xgb/DRL/Mrs15n42waTRVAc1PRYNsz4G5iLNmCWpEzvd2CRbj6HLSb118hejgazngQO3oms5xGGggkOXnoO8K+ojC2mlpa3CmQb8rvFdCz5ReLVCrhfXOMycervQ/Xfq9FGNLN7nvDjpwOf3KtPP/+uXZlNSC53y8xGB6MQQToORkUJqAvHDCCZ7ukyDzInn2n8/zStomGU1Q0ZEhh+ZznOZuYkph6R+yMGt4hM1wgF2awW6dFL1RR0MsYI/wxpEtniwv08dgG1JOVtkv6gZqriDERlrDr1nSQngAAAFhNUCASAwAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNyAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0IzNDY5MThGNEMxMUU3OTQ2QkFCMUFGRjk5NjI3RiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0IzNDY5MjhGNEMxMUU3OTQ2QkFCMUFGRjk5NjI3RiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjEzNDQxRkM0OEY0QzExRTc5NDZCQUIxQUZGOTk2MjdGIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjMzQjM0NjkwOEY0QzExRTc5NDZCQUIxQUZGOTk2MjdGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+';
+  const base64img_BL='UklGRvgDAABXRUJQVlA4WAoAAAAQAAAAHwAAHwAAQUxQSAABAAABgGJr25zmc+ygLhLHDpB1SFwkrhIZV4lDxiFxSHZQh8Qh65BP5vFVGfg6LCAiJsD+/SAaDddvMzZR9DHjzvQzDkZCgHiKarTIUuDTzDZkVVVwmEg03ZewN4uopJarg9TAyifPsrKWpIrYJwFIJHXcvbbRjVoSeAV2pJI6Hl6HGDqp4uwFVFIHG5+qqppequBkHn2n0TqF88JjbgNHnzzLsryW1MHKJWGYSyqJnbbr8JtG6vhyCswOVFLP3S240UgtN6dhKqniNDEZTyVlLyll9wqDmSWPxcjMeX0Oa3utHW+qHAjN9hTtXOafl2a2uDD7GV7HL9FuaaOL+Dr33f59VlA4INICAADwDwCdASogACAAAMASJbACdMzQ1d5nw7mmve7JT+eycBnAP1A/XThAP7X/JesA9AD9OfTL/WD4S/KFo7mzW/pPan/EZmHeCMef5zSHdUR/sP+O/ED3uM9v4z/dv+d7g/8Y/mH+k/MbjRv1AQdE05LD0m+BUwpQBmZbJxYf+tDqnXyxZpJzaJm4AP6zpxPxIZDduWAbFyL+YFNjl/pWDB18dX/9jVRRRqeoT5kfW+GRBBF3MUUUSO6fxGVdlPz+Mkr/HNowRwlu6RGzIVpGRxOquKAKcn49OenxYQTgoSLmzPVo0qYLX+xWqCawyo6F1KbB7X5WXwGJWMWasXAZP8xrDH01zfQzzI0Lm5mfcC8PUnOLGe8/Kxtxl/+ejP3/+GIPgNxfZklldi1/dtfpYQAtDn2inRbavKf84tiL/XteIlbJ+2XUMtAofxI3hf7L1EQpBzeYH86yN/HzFSmCHYrKUuZZCrCgkp+CzJhSChBDqssE9G1NI1z/5z0DwCaoMQwymT7QupB1zP4bSZ/UhiMJipTUYi/WAu7UpocTQlfGcJW1cYv+dTmHetgT/hF+GcI2JYdGC0sqobUqG4LCyHRNSSAdFtntPzuzPy1O4G1cJ/yeX7b8Pzjnw8W5ICuTVVyU3po9nKr/sYW7W0rQSfMKI8RW8j3DwFT+olc0jv25NMmXQzokBjYSBIfZdr/o3Bo6dBgBmQmupjA9NLezLA27tFkd/H2b6DBuqjFV78S7l5FH7XBU8cff/+v6ngSuuW9fnvX8QPNwjJr8xjp7S7rVka1nn47//nQmU+dFjEKapX4+syr6usLAj58WMN9uN8yHUi38mvBnU1pPnv73Poc3uoqP59938hp/3MnYjBAjH8i50N2O8n/p6eex8/V2APsNxL78IyaEthf3ESMwTJnK8xqoU9nvkP7JuDtPeyG5U/NHHX3L0TqA+qsAs0KrCXngAA==';
   // 用於替换 圖片元素的HTML 字符串
   const imageElement_Netflix = `<img src="data:image/webp;base64,${base64img_Netflix}" alt="[Netflix]" style="width:12px; height:12px; vertical-align:middle;">`;
   const imageElement_Disney = `<img src="data:image/webp;base64,${base64img_Disney}" alt="[Disney+]" style="width:12px; height:12px; vertical-align:middle;">`;
   const imageElement_bilibili = `<img src="data:image/webp;base64,${base64img_bilibili}" alt="[bilibili]" style="width:12px; height:12px; vertical-align:middle;">`;
   const imageElement_ABEMA = `<img src="data:image/webp;base64,${base64img_ABEMA}" alt="[ABEMA]" style="width:12px; height:12px; vertical-align:middle;">`;
   const imageElement_YouTube = `<img src="data:image/webp;base64,${base64img_YouTube}" alt="[YouTube]" style="width:12px; height:12px; vertical-align:middle;">`;
+  const imageElement_BL = `<img src="data:image/webp;base64,${base64img_BL}" alt="[BL]" style="width:12px; height:12px; vertical-align:middle;">`;
   // 定義替換函數，將文字替換為圖片
   function replaceTextWithImage(text) {
     return text.replace(/\[Netflix\]/g, imageElement_Netflix)
       .replace(/\[Disney\+\]/g, imageElement_Disney)
       .replace(/\[bilibili\]/g, imageElement_bilibili)
       .replace(/\[ABEMA\]/g, imageElement_ABEMA)
-      .replace(/\[YouTube\]/g, imageElement_YouTube);
+      .replace(/\[YouTube\]/g, imageElement_YouTube)
+      .replace(/\[BL\]/g, imageElement_BL);
   }
   //---------------------------------------------
   //確保外部dmhyEntries有連到
@@ -125,7 +128,7 @@
   // 確認 <marquee> 元素存在
   if (marquee) {
     // 替换 <marquee> 元素的内容
-    const customText = '[Netflix]:Netflix獨播｜[Disney+]:Disney+獨播｜[ABEMA][YouTube]：能在此平台免費看';
+    const customText = '▶️常態放送｜[Netflix]Netflix獨佔｜[Disney+]Disney+獨佔｜[ABEMA]ABEMA獨佔｜[bilibili]B8station日配版';
     const replacedText = replaceTextWithImage(customText);
 
     // 将 <marquee> 元素替换 <div> 元素，同時串接兩個字串
