@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DMHY新番資源索引 修正(GitHub版)
 // @namespace    https://github.com/rinsaika/dmhy-
-// @version      4.4
+// @version      4.5
 // @description  修改DMHY新番資源索引，修正為目前播映中動畫，安裝完GitHub版後，就不需要一直更新了。
 // @author       Saika
 // @match        https://www.dmhy.org/*
@@ -60,13 +60,13 @@
   const base64img_BL='UklGRvgDAABXRUJQVlA4WAoAAAAQAAAAHwAAHwAAQUxQSAABAAABgGJr25zmc+ygLhLHDpB1SFwkrhIZV4lDxiFxSHZQh8Qh65BP5vFVGfg6LCAiJsD+/SAaDddvMzZR9DHjzvQzDkZCgHiKarTIUuDTzDZkVVVwmEg03ZewN4uopJarg9TAyifPsrKWpIrYJwFIJHXcvbbRjVoSeAV2pJI6Hl6HGDqp4uwFVFIHG5+qqppequBkHn2n0TqF88JjbgNHnzzLsryW1MHKJWGYSyqJnbbr8JtG6vhyCswOVFLP3S240UgtN6dhKqniNDEZTyVlLyll9wqDmSWPxcjMeX0Oa3utHW+qHAjN9hTtXOafl2a2uDD7GV7HL9FuaaOL+Dr33f59VlA4INICAADwDwCdASogACAAAMASJbACdMzQ1d5nw7mmve7JT+eycBnAP1A/XThAP7X/JesA9AD9OfTL/WD4S/KFo7mzW/pPan/EZmHeCMef5zSHdUR/sP+O/ED3uM9v4z/dv+d7g/8Y/mH+k/MbjRv1AQdE05LD0m+BUwpQBmZbJxYf+tDqnXyxZpJzaJm4AP6zpxPxIZDduWAbFyL+YFNjl/pWDB18dX/9jVRRRqeoT5kfW+GRBBF3MUUUSO6fxGVdlPz+Mkr/HNowRwlu6RGzIVpGRxOquKAKcn49OenxYQTgoSLmzPVo0qYLX+xWqCawyo6F1KbB7X5WXwGJWMWasXAZP8xrDH01zfQzzI0Lm5mfcC8PUnOLGe8/Kxtxl/+ejP3/+GIPgNxfZklldi1/dtfpYQAtDn2inRbavKf84tiL/XteIlbJ+2XUMtAofxI3hf7L1EQpBzeYH86yN/HzFSmCHYrKUuZZCrCgkp+CzJhSChBDqssE9G1NI1z/5z0DwCaoMQwymT7QupB1zP4bSZ/UhiMJipTUYi/WAu7UpocTQlfGcJW1cYv+dTmHetgT/hF+GcI2JYdGC0sqobUqG4LCyHRNSSAdFtntPzuzPy1O4G1cJ/yeX7b8Pzjnw8W5ICuTVVyU3po9nKr/sYW7W0rQSfMKI8RW8j3DwFT+olc0jv25NMmXQzokBjYSBIfZdr/o3Bo6dBgBmQmupjA9NLezLA27tFkd/H2b6DBuqjFV78S7l5FH7XBU8cff/+v6ngSuuW9fnvX8QPNwjJr8xjp7S7rVka1nn47//nQmU+dFjEKapX4+syr6usLAj58WMN9uN8yHUi38mvBnU1pPnv73Poc3uoqP59938hp/3MnYjBAjH8i50N2O8n/p6eex8/V2APsNxL78IyaEthf3ESMwTJnK8xqoU9nvkP7JuDtPeyG5U/NHHX3L0TqA+qsAs0KrCXngAA==';
   const base64img_AnimeFesta='UklGRgICAABXRUJQVlA4IPYBAABQCQCdASogACAAAMASJQAUkBkkf7AejXcoOT1PHfl35OfkdNs2qUf4zUR/6/2K/4XxU/N3sBfyH+ff6wzPOTrNWZt3M0OPXNRbNlOOclJCQjBFTAD+//4mx2qMt/xOCGgn3g3xR5uPurhEFMLAWX3pNWnKKbyk5B+1pfGoYbwij8o3T+QOdhOgDdEMpJU0rLj+KWz7lm85nu6D69TDVV8j5qdXoPzk/1T/4ZwMmoqt7+H+SlyhGWEDOcoLH+0KSWd2S1WYBkBaiWKH4RsmV7q8Voz/+JDrTn/I8tjdwBpuv9qhV8T/VFpWaUYGY/P67Ta+SSKhPf//jnIrPjYz/w82eiB+rnv54jinKRBvbq/A/7z9c2l+JpTxPGLhef4AUJzPE//9tWjEsURsjc/x2+W4KHF7ZT5n/59C3xpFidlhhZ8P/h+9nRn3Xx+dwADVArlpkN+Sj+Kdf0lkuk8pvpAWmt//2n/aP7knXzP9KyBK50nKHa6P/XHw+ID+70X2tVLMvR7aTS5dTnTS7YXHL2wSHRRUU3MKqPYRWpEDao9snBkad+FaDEVBFmf13TdSVTqJ0mAbCeYdR3dNe8zEaNX1yvnQ6gzeqmzhvi2Jo/P/sc8A8SYwELzAsHOkFku9hrs9Rch3/9cgh2vWMkScmBEpk+5/AAAA';
   // 用於替换 圖片元素的HTML 字符串
-  const imageElement_Netflix = `<img src="data:image/webp;base64,${base64img_Netflix}" alt="[Netflix]" style="width:12px; height:12px; vertical-align:middle;">`;
-  const imageElement_Disney = `<img src="data:image/webp;base64,${base64img_Disney}" alt="[Disney+]" style="width:12px; height:12px; vertical-align:middle;">`;
-  const imageElement_bilibili = `<img src="data:image/webp;base64,${base64img_bilibili}" alt="[bilibili]" style="width:12px; height:12px; vertical-align:middle;">`;
-  const imageElement_ABEMA = `<img src="data:image/webp;base64,${base64img_ABEMA}" alt="[ABEMA]" style="width:12px; height:12px; vertical-align:middle;">`;
-  const imageElement_YouTube = `<img src="data:image/webp;base64,${base64img_YouTube}" alt="[YouTube]" style="width:12px; height:12px; vertical-align:middle;">`;
-  const imageElement_BL = `<img src="data:image/webp;base64,${base64img_BL}" alt="[BL]" style="width:12px; height:12px; vertical-align:middle;">`;
-  const imageElement_AnimeFesta = `<img src="data:image/webp;base64,${base64img_AnimeFesta}" alt="[AnimeFesta]" style="width:12px; height:12px; vertical-align:middle;">`;
+  const imageElement_Netflix = `<img src="data:image/webp;base64,${base64img_Netflix}" alt="[Netflix]" style="width:12px; height:12px; vertical-align:middle; transform: translateY(-10%);">`;
+  const imageElement_Disney = `<img src="data:image/webp;base64,${base64img_Disney}" alt="[Disney+]" style="width:12px; height:12px; vertical-align:middle; transform: translateY(-10%);">`;
+  const imageElement_bilibili = `<img src="data:image/webp;base64,${base64img_bilibili}" alt="[bilibili]" style="width:12px; height:12px; vertical-align:middle; transform: translateY(-10%);">`;
+  const imageElement_ABEMA = `<img src="data:image/webp;base64,${base64img_ABEMA}" alt="[ABEMA]" style="width:12px; height:12px; vertical-align:middle; transform: translateY(-10%);">`;
+  const imageElement_YouTube = `<img src="data:image/webp;base64,${base64img_YouTube}" alt="[YouTube]" style="width:12px; height:12px; vertical-align:middle; transform: translateY(-10%);">`;
+  const imageElement_BL = `<img src="data:image/webp;base64,${base64img_BL}" alt="[BL]" style="width:12px; height:12px; vertical-align:middle; transform: translateY(-10%);">`;
+  const imageElement_AnimeFesta = `<img src="data:image/webp;base64,${base64img_AnimeFesta}" alt="[AnimeFesta]" style="width:12px; height:12px; vertical-align:middle; transform: translateY(-10%);">`;
   // 定義替換函數，將文字替換為圖片
   function replaceTextWithImage(text) {
     return text.replace(/\[Netflix\]/g, imageElement_Netflix)
