@@ -1,5 +1,8 @@
- // 定義要插入的多個連結的數組
+    //適配不同的鏡像站
     const hostname = window.location.hostname;
+    //クール季度，用於公告欄使用
+    const kuru = '目前為2024春季(4~6月)索引。';
+    // 定義要插入的多個連結的數組
     const dmhyEntries = [
 {day:1, nameTW: '終末的列車前往何方？', nameCN:'末班列车去哪里了？', link: 'https://' + hostname + '/topics/list?keyword=列車' },
 {day:1, nameTW: '神明渴求著遊戲。', nameCN:'神渴望着游戏。', link: 'https://' + hostname + '/topics/list?keyword=神明渴求著遊戲' },
