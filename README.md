@@ -90,13 +90,13 @@
   nameJP: 'かつて魔法少女と悪は敵対していた。',
   nameTW: '曾經、魔法少女和邪惡相互為敵。',
   nameCN: '曾经、魔法少女和邪恶相互为敌。',
-  link: 'https://' + hostname + '/topics/list?keyword=魔法少女和邪惡相互為敵'
+  keyword: '魔法少女和邪惡相互為敵。'
 },{
-  day: 4,
-  nameJP: '俺は全てを【パリイ】する～逆勘違いの世界最強は冒険者になりたい～',
-  nameTW: '我要【招架】一切～反誤解的世界最強想成為冒險家～',
-  nameCN: '',
-  link: 'https://' + hostname + '/topics/list?keyword='
+  day: 7,
+  nameJP: '疑似ハーレム',
+  nameTW: '模擬後宮體驗',
+  nameCN: '百变的七仓同学',
+  keyword: '後宮|百变'
 },</code>
 
 - 簡單說明
@@ -104,7 +104,7 @@
 - <code>nameJP: ''</code>  ''裡為日文顯示文字(懸浮視窗)
 - <code>nameTW: ''</code>  ''裡為繁體顯示文字
 - <code>nameCN: ''</code>  ''里为简体显示文字
-- <code>link: 'https://' + hostname + '/topics/list?keyword=列車' }</code> 前面都保持不動，keyword=後面的內容是查詢功能
+- <code>keyword: ''</code> ''裡為索引的連結關鍵字
 - 如此一來就能撰寫自己的版本了，可在名字加入關鍵字([Netflix][bilibili][ABEMA][YouTube][BL][AnimeFesta])將自動顯示圖示
 
 # 計畫
