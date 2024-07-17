@@ -14,11 +14,13 @@
     - 上方連結為js檔案，將內容全選<kbd>Ctrl+A</kbd>、複製<kbd>Ctrl+C</kbd> (將整個檔案內文字複製)
     - 開啟瀏覽器 [油猴] → [新增腳本...]
       >此時會跳出預設的腳本內容，全部刪除
-    - 最後將腳本貼上<kbd>Ctrl+V</kbd>，並保存<kbd>Ctrl+S</kbd>即可，未來油猴會自動判斷GitHub版本更新
-      
+    - 將腳本貼上<kbd>Ctrl+V</kbd>，並保存<kbd>Ctrl+S</kbd>即可，未來油猴會自動判斷GitHub版本更新
+    - 最後需要在 [油猴] → [設定] 最下方的 "外部 更新間隔" 設定成 <kbd>每天</kbd>
+      >這樣才會自動更新外部動態js
+      ![](https://raw.githubusercontent.com/rinsaika/dmhy-/main/img/%E6%B2%B9%E7%8C%B4%E8%A8%AD%E5%AE%9A%E8%AA%AA%E6%98%8E.webp)
 - [GreasyFork 靜態更新版](https://greasyfork.org/zh-TW/scripts/493955-dmhy%E6%96%B0%E7%95%AA%E8%B3%87%E6%BA%90%E7%B4%A2%E5%BC%95-%E4%BF%AE%E6%AD%A3)
   >GreasyFork版：因GreasyFork不提供外部動態連結，所以我每次更新"新番索引"時，使用者都必須更新一次。才能顯示最新的索引<br>
-  >壞處是我一更新，使用者也必須更新才可以<br>
+  >壞處是我更新索引時，使用者也必須更新本體才可以<br>
   >好處是使用者可以更自由靈活更改自己需要的連結，可以進去編輯(編輯方式在文末)
   - 安裝流程
     - 點選上方連結，按<kbd>安裝腳本</kbd>即可
