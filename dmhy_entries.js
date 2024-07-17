@@ -3,7 +3,7 @@
   const hostname = window.location.hostname;
 
   //クール季度，用於公告欄使用
-  const kuru = '目前為2024夏季(7~9月)索引v2';
+  const kuru = '目前為2024夏季(7~9月)索引v2.1';
 
   // 從 localStorage 中讀取已存儲的 dmhyEntries 和 kuru
   let storedKuru = localStorage.getItem('LocalKuru');
