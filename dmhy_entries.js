@@ -47,7 +47,7 @@
 {day:3, nameJP: '魔王軍最強の魔術師は人間だった', nameTW: '魔王軍最強的魔術師是人類', nameCN:'魔王军最强的魔术师是人类', keyword: '魔王軍最強的魔術師是人類' },
 {day:3, nameJP: '【推しの子】第2期', nameTW: '【我推的孩子】第二季', nameCN:'我推的孩子 第二季', keyword: '我推的孩子' },
 {day:3, nameJP: '時々ボソッとロシア語でデレる隣のアーリャさん', nameTW: '不時輕聲地以俄語遮羞的鄰座艾莉同學', nameCN:'不时轻声地以俄语遮羞的邻座艾莉同学', keyword: '不時輕聲地以俄語遮羞的鄰座艾莉同學' },
-{day:3, nameJP: '恋は双子で割り切れない', nameTW: '雙生戀情密不可分', nameCN:'无法割舍恋情的双胞胎', keyword: '雙生戀情密不可分' },
+{day:3, nameJP: '恋は双子で割り切れない', nameTW: '雙生戀情密不可分', nameCN:'无法割舍恋情的双胞胎', keyword: '雙生戀情密不可分|恋爱没法用双子除尽' },
 {day:3, nameJP: '戦国妖狐 千魔混沌編', nameTW: '戰國妖狐 千魔混沌編', nameCN:'战国妖狐 千魔混沌編', keyword: '戰國妖狐' },
 {day:3, nameJP: 'デリコズ・ナーサリー (八月放送)', nameTW: 'Delicos・Nursery', nameCN:'Delicos・Nursery', keyword: 'Delicos' },
 {day:3, nameJP: 'キミと僕の最後の戦場、あるいは世界が始まる聖戦 Season II', nameTW: '這是妳與我的最後戰場，或是開創世界的聖戰 第二季', nameCN:'你与我最后的战场，亦或是世界起始的圣战 第2季', keyword: '最後的戰場' },
