@@ -3,7 +3,7 @@
   const hostname = window.location.hostname;
 
   //クール季度，用於公告欄使用
-  const kuru = '目前為2024夏季(7~9月)索引v2.1';
+  const kuru = '目前為2024夏季(7~9月)索引v2.2';
 
   // 從 localStorage 中讀取已存儲的 dmhyEntries 和 kuru
   let storedKuru = localStorage.getItem('LocalKuru');
@@ -52,7 +52,7 @@
 {day:3, nameJP: 'デリコズ・ナーサリー (八月放送)', nameTW: 'Delicos・Nursery', nameCN:'Delicos・Nursery', keyword: 'Delicos' },
 {day:3, nameJP: 'キミと僕の最後の戦場、あるいは世界が始まる聖戦 Season II', nameTW: '這是妳與我的最後戰場，或是開創世界的聖戰 第二季', nameCN:'你与我最后的战场，亦或是世界起始的圣战 第2季', keyword: '最後的戰場' },
 {day:4, nameJP: '義妹生活', nameTW: '義妹生活', nameCN:'义妹生活', keyword: '義妹生活' },
-{day:4, nameJP: '黄昏アウトフォーカス', nameTW: '[BL]黃昏光影', nameCN:'[BL]黄昏光影', keyword: '黃昏光影' },
+{day:4, nameJP: '黄昏アウトフォーカス', nameTW: '[BL]黃昏光影', nameCN:'[BL]黄昏光影', keyword: '黃昏光影黃昏失焦' },
 {day:4, nameJP: 'ラーメン赤猫', nameTW: '拉麵赤貓', nameCN:'拉面赤猫', keyword: '拉麵赤貓' },
 {day:4, nameJP: '俺は全てを【パリイ】する～逆勘違いの世界最強は冒険者になりたい～', nameTW: '我要【招架】一切～反誤解的世界最強想成為冒險家～', nameCN:'我要招架一切反误解的世界最强想成为冒险者', keyword: '反誤解的世界最強' },
 {day:4, nameJP: '女神のカフェテラス 第2期', nameTW: '女神咖啡廳 第二季', nameCN:'女神咖啡厅 第2季', keyword: '女神咖啡廳|露天咖啡厅' },
