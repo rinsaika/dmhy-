@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DMHY新番資源索引 修正(GitHub版)
 // @namespace    https://github.com/rinsaika/dmhy-
-// @version      4.8
+// @version      4.9
 // @description  修改DMHY新番資源索引，修正為目前播映中動畫，安裝完GitHub版後，就不需要一直更新了。
 // @author       Saika
 // @match        https://www.dmhy.org/*
@@ -163,7 +163,7 @@ function replaceTextWithImage(text) {
   // 確認 <marquee> 元素存在
   if (marquee) {
     // 替换 <marquee> 元素的内容
-    const customText = '▶️常態放送  [Netflix]Netflix獨佔  [Disney+]Disney+獨佔  [ABEMA]ABEMA獨佔  [bilibili]B8station日配版｜*有索引≠有資源';
+    const customText = '▶️常態放送  [Netflix]Netflix  [Disney+]Disney+  [ABEMA]ABEMA  [+Ultra]+Ultra  [bilibili]B8station日配版｜*有索引≠有資源';
     const replacedText = replaceTextWithImage(customText);
 
     // 将 <marquee> 元素替换 <div> 元素，同時串接兩個字串
