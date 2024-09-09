@@ -96,7 +96,7 @@ const imageElement_ABEMA = fetchImage(ico_ABEMA, base64img_ABEMA, "ABEMA");
 const imageElement_YouTube = fetchImage(ico_YouTube, base64img_YouTube, "YouTube");
 const imageElement_AnimeFesta = fetchImage(ico_AnimeFesta, base64img_AnimeFesta, "AnimeFesta");
 const imageElement_BL = generateImageElement(base64img_BL, "BL");
-const imageElement_Ultra = generateImageElement(base64img_Ultra, "Ultra+");
+const imageElement_Ultra = generateImageElement(base64img_Ultra, "+Ultra");
 
 // 定義替換函數，將文字替換為圖片
 function replaceTextWithImage(text) {
